@@ -1,0 +1,43 @@
+<template>
+  <div id="app">
+    <PageLoader />
+    <ParticleBackground />
+    <Navbar />
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Resume />
+    <Contact />
+    <Footer />
+    <BackToTop />
+  </div>
+</template>
+
+<script setup>
+import PageLoader from './components/PageLoader.vue'
+import ParticleBackground from './components/ParticleBackground.vue'
+import Navbar from './components/Navbar.vue'
+import Hero from './components/Hero.vue'
+import About from './components/About.vue'
+import Skills from './components/Skills.vue'
+import Projects from './components/Projects.vue'
+import Resume from './components/Resume.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
+import BackToTop from './components/BackToTop.vue'
+</script>
+
+<style>
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Ensure content is above particles */
+#app > *:not(.particles-container) {
+  position: relative;
+  z-index: 1;
+}
+</style>
+

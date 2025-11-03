@@ -1,0 +1,119 @@
+PORTFOLIO QUICK REFERENCE CARD
+==============================
+
+🚀 START DEV SERVER
+-------------------
+npm run dev
+→ Visit: http://localhost:5173
+
+
+📦 BUILD FOR PRODUCTION
+-----------------------
+npm run build
+→ Output: dist/ folder
+
+
+📝 FILES TO CUSTOMIZE
+---------------------
+
+YOUR INFO:
+- src/components/Hero.vue (lines 15-20)
+- src/components/About.vue (lines 24-48)
+- src/components/Contact.vue (lines 13-25)
+- src/components/Footer.vue (line 6)
+
+YOUR SKILLS:
+- src/components/Skills.vue (lines 35-62)
+
+YOUR PROJECTS:
+- src/components/Projects.vue (lines 42-88)
+
+YOUR COLORS:
+- src/styles/variables.css (lines 4-10)
+
+YOUR RESUME:
+1. Add PDF to public/ folder
+2. Update link in About.vue (line 51)
+
+YOUR PHOTO:
+1. Add image to src/assets/
+2. Update About.vue (line 11-19)
+
+
+🎨 COLOR SCHEME OPTIONS
+-----------------------
+Current: Dark Blue (#1e3a8a) + Cyan (#06b6d4)
+
+Alternatives:
+- Purple/Pink: #6B46C1 + #EC4899
+- Green/Teal: #059669 + #14B8A6
+- Orange/Red: #EA580C + #DC2626
+- Navy/Gold: #1e3a5f + #fbbf24
+
+
+📱 RESPONSIVE BREAKPOINTS
+-------------------------
+Mobile:  < 480px
+Tablet:  481-768px
+Desktop: > 768px
+
+
+🌐 DEPLOYMENT COMMANDS
+----------------------
+Vercel:  vercel
+Netlify: netlify deploy --prod
+Build:   npm run build
+
+
+🗂️ PROJECT STRUCTURE
+--------------------
+src/
+├── App.vue              Main app
+├── main.js              Entry point
+├── components/          All sections
+│   ├── Navbar.vue       Top navigation
+│   ├── Hero.vue         Landing section
+│   ├── About.vue        About section
+│   ├── Skills.vue       Skills grid
+│   ├── Projects.vue     Project gallery
+│   ├── ProjectCard.vue  Single project
+│   ├── Contact.vue      Contact form
+│   └── Footer.vue       Footer
+└── styles/              Styling
+    ├── main.css         Global styles
+    └── variables.css    Theme colors
+
+
+✅ WHAT'S INCLUDED
+------------------
+✓ Responsive design
+✓ Mobile hamburger menu
+✓ Smooth scroll navigation
+✓ Animated hero section
+✓ Skills showcase (6 categories)
+✓ Project filtering
+✓ Contact form
+✓ Social media links
+✓ Modern animations
+
+
+📚 HELPFUL LINKS
+----------------
+Vue.js: https://vuejs.org
+Vite:   https://vitejs.dev
+Icons:  https://heroicons.com
+
+
+🔥 QUICK TIPS
+-------------
+1. Replace ALL placeholder text
+2. Add real project images
+3. Update social media URLs
+4. Test on mobile devices
+5. Add your resume PDF
+6. Update meta tags in index.html
+7. Test contact form
+8. Check all links work
+9. Optimize images before adding
+10. Get feedback before deploying!
+

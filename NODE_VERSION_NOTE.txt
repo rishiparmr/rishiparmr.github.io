@@ -1,0 +1,28 @@
+NODE VERSION NOTICE
+===================
+
+You are currently using Node.js 20.7.0.
+
+Vite recommends Node.js 20.19+ or 22.12+, but your current version 
+should still work fine for development.
+
+If you encounter any issues:
+
+1. Update Node.js:
+   - Using nvm: nvm install 20.19
+   - Using Homebrew: brew upgrade node
+   - Download from: https://nodejs.org
+
+2. Or use an older Vite version:
+   - npm install -D vite@5.0.0
+   - npm install -D @vitejs/plugin-vue@5.0.0
+
+The portfolio should work fine with your current setup.
+If the dev server runs without errors, you're good to go!
+
+To start the dev server:
+   npm run dev
+
+To build for production:
+   npm run build
+

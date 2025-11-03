@@ -1,0 +1,73 @@
+/* Modern Tech Color Scheme Variables */
+:root {
+  /* Primary Colors */
+  --color-primary: #1e3a8a;        /* Dark Blue */
+  --color-primary-dark: #0f172a;   /* Deeper Blue */
+  --color-primary-light: #3b82f6;  /* Bright Blue */
+  
+  /* Accent Colors */
+  --color-accent: #06b6d4;         /* Cyan */
+  --color-accent-light: #22d3ee;   /* Light Cyan */
+  --color-accent-glow: rgba(6, 182, 212, 0.3);
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-light: #f8fafc;
+  --color-gray: #64748b;
+  --color-dark: #0f172a;
+  --color-text: #1e293b;
+  --color-text-light: #475569;
+  
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --bg-dark: #0f172a;
+  --bg-gradient: linear-gradient(135deg, #1e3a8a 0%, #06b6d4 100%);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  
+  /* Typography */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-code: 'Monaco', 'Courier New', monospace;
+  
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px var(--color-accent-glow);
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+  
+  /* Z-index */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}
+
