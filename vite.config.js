@@ -4,5 +4,5 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/', // For GitHub Pages at rishiparmar.github.io
+  base: './', // Use relative paths for GitHub Pages
 })
