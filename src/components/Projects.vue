@@ -118,6 +118,7 @@ const filteredProjects = computed(() => {
   font-weight: 600;
   transition: all var(--transition-fast);
   font-size: var(--font-size-base);
+  font-family: var(--font-primary);
 }
 
 .filter-btn:hover {

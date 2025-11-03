@@ -48,12 +48,15 @@
           </div>
         </div>
       </div>
+      
+      <StatsCounter />
     </div>
   </section>
 </template>
 
 <script setup>
 import { useScrollAnimation } from '../composables/useScrollAnimation'
+import StatsCounter from './StatsCounter.vue'
 
 const { isVisible, element } = useScrollAnimation({ threshold: 0.2, once: true })
 </script>
