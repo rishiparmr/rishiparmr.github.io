@@ -34,8 +34,8 @@ import BackToTop from './components/BackToTop.vue'
   position: relative;
 }
 
-/* Ensure content is above particles */
-#app > *:not(.particles-container) {
+/* Ensure content is above particles, but preserve navbar fixed positioning */
+#app > *:not(.particles-container):not(nav) {
   position: relative;
   z-index: 1;
 }

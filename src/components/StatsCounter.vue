@@ -94,12 +94,40 @@ watch(isVisible, (newVal) => {
 @media (max-width: 768px) {
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+  
+  .stat-item {
+    padding: var(--spacing-sm);
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
   
   .stat-number {
     font-size: 2.5rem;
   }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
 }
 </style>
+
 
