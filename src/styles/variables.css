@@ -71,3 +71,37 @@
   --z-tooltip: 3000;
 }
 
+/* Dark Mode Colors */
+.dark-mode {
+  /* Primary Colors */
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #60a5fa;
+  
+  /* Accent Colors */
+  --color-accent: #22d3ee;
+  --color-accent-light: #67e8f9;
+  --color-accent-glow: rgba(34, 211, 238, 0.3);
+  
+  /* Neutral Colors */
+  --color-white: #0f172a;
+  --color-light: #1e293b;
+  --color-gray: #94a3b8;
+  --color-dark: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-text-light: #cbd5e1;
+  
+  /* Backgrounds */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-dark: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #1e3a8a 0%, #06b6d4 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px var(--color-accent-glow);
+}
+

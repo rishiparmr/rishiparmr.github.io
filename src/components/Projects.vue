@@ -108,29 +108,93 @@ const filteredProjects = computed(() => {
   flex-wrap: wrap;
 }
 
-.filter-btn {
+button.filter-btn,
+.filter-buttons .filter-btn,
+.filter-buttons button {
   padding: var(--spacing-xs) var(--spacing-md);
   background: var(--bg-primary);
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
-  border-radius: var(--radius-full);
+  border-radius: 9999px !important;
   cursor: pointer;
   font-weight: 600;
   transition: all var(--transition-fast);
   font-size: var(--font-size-base);
   font-family: var(--font-primary);
+  outline: none !important;
+  outline-offset: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.filter-btn:hover {
+button.filter-btn:focus,
+.filter-buttons .filter-btn:focus,
+.filter-buttons button:focus,
+button.filter-btn:focus-visible,
+.filter-buttons .filter-btn:focus-visible,
+.filter-buttons button:focus-visible {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border-radius: 9999px !important;
+}
+
+button.filter-btn:hover,
+.filter-buttons .filter-btn:hover,
+.filter-buttons button:hover {
   background: var(--color-primary);
   color: white;
+  border-radius: 9999px !important;
 }
 
-.filter-btn.active {
-  background: var(--bg-gradient);
-  border-color: transparent;
+button.filter-btn.active,
+.filter-buttons .filter-btn.active,
+.filter-buttons button.active {
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
   color: white;
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  border-radius: 9999px !important;
+  outline: none !important;
+  transform: translateY(-1px);
+}
+
+button.filter-btn.active:focus,
+.filter-buttons .filter-btn.active:focus,
+.filter-buttons button.active:focus,
+button.filter-btn.active:focus-visible,
+.filter-buttons .filter-btn.active:focus-visible,
+.filter-buttons button.active:focus-visible {
+  outline: none !important;
+  border-radius: 9999px !important;
+}
+
+/* Dark Mode Filter Buttons */
+.dark-mode button.filter-btn,
+.dark-mode .filter-buttons .filter-btn,
+.dark-mode .filter-buttons button {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.dark-mode button.filter-btn:hover,
+.dark-mode .filter-buttons .filter-btn:hover,
+.dark-mode .filter-buttons button:hover {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.dark-mode button.filter-btn.active,
+.dark-mode .filter-buttons .filter-btn.active,
+.dark-mode .filter-buttons button.active {
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.4);
+  transform: translateY(-1px);
 }
 
 .projects-grid {

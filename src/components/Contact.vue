@@ -196,6 +196,24 @@ const handleSubmit = async () => {
   border-color: var(--color-accent);
 }
 
+/* Dark Mode Info Cards */
+.dark-mode .info-card {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.95) 0%, 
+    rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(34, 211, 238, 0.1);
+}
+
+.dark-mode .info-card:hover {
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.5),
+    0 6px 12px rgba(34, 211, 238, 0.15);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
 .info-icon {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-xs);
@@ -275,14 +293,39 @@ const handleSubmit = async () => {
   border-radius: var(--radius-md);
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
   background: white;
+  color: var(--color-text);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-accent);
+}
+
+/* Dark Mode Form */
+.dark-mode .contact-form {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(147, 197, 253, 0.2);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(147, 197, 253, 0.2);
+  color: var(--color-text);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: var(--color-accent);
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+  color: var(--color-gray);
 }
 
 .form-group textarea {

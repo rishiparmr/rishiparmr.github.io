@@ -11,6 +11,7 @@
     <Contact />
     <Footer />
     <BackToTop />
+    <ThemeToggle />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Resume from './components/Resume.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import BackToTop from './components/BackToTop.vue'
+import ThemeToggle from './components/ThemeToggle.vue'
 </script>
 
 <style>

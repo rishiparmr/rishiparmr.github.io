@@ -68,9 +68,10 @@ const currentYear = computed(() => new Date().getFullYear())
 
 <style scoped>
 .footer {
-  background: var(--color-dark);
-  color: white;
+  background: var(--color-primary-dark);
+  color: var(--color-light);
   padding: var(--spacing-xl) 0 var(--spacing-md);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-content {
@@ -79,13 +80,13 @@ const currentYear = computed(() => new Date().getFullYear())
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .footer-section h3,
 .footer-section h4 {
   margin-bottom: var(--spacing-sm);
-  color: white;
+  color: var(--color-light);
 }
 
 .footer-logo {
@@ -98,7 +99,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-gray);
   line-height: 1.6;
 }
 
@@ -111,7 +112,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-gray);
   transition: color var(--transition-fast);
 }
 
@@ -130,20 +131,22 @@ const currentYear = computed(() => new Date().getFullYear())
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--color-light);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .footer-social-link:hover {
   background: var(--color-accent);
   transform: translateY(-3px);
+  border-color: var(--color-accent);
 }
 
 .footer-bottom {
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-gray);
   font-size: var(--font-size-sm);
 }
 

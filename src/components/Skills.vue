@@ -131,6 +131,8 @@ const skillCategories = ref([
 
 .card-front {
   background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-back {
@@ -138,6 +140,26 @@ const skillCategories = ref([
   color: white;
   transform: rotateY(180deg);
   overflow-y: auto;
+}
+
+/* Dark Mode Styles */
+.dark-mode .card-front {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.95) 0%, 
+    rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(34, 211, 238, 0.1),
+    inset 0 1px 0 rgba(147, 197, 253, 0.05);
+}
+
+.dark-mode .skill-category:hover .card-front {
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.5),
+    0 6px 12px rgba(34, 211, 238, 0.15),
+    inset 0 1px 0 rgba(147, 197, 253, 0.1);
+  border-color: rgba(34, 211, 238, 0.3);
 }
 
 .category-icon {
