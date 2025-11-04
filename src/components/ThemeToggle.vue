@@ -2,7 +2,7 @@
   <button 
     @click="toggleTheme" 
     class="theme-toggle"
-    :class="{ 'dark': isDark }"
+    :class="{ 'dark': isDark, 'visible': isVisible }"
     aria-label="Toggle dark mode"
   >
     <div class="toggle-track">
@@ -27,9 +27,18 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import { useTheme } from '../composables/useTheme'
 
 const { isDark, toggleTheme } = useTheme()
+const isVisible = ref(false)
+
+onMounted(() => {
+  // Show toggle after loader (1500ms same as navbar)
+  setTimeout(() => {
+    isVisible.value = true
+  }, 1500)
+})
 </script>
 
 <style scoped>
@@ -44,14 +53,58 @@ const { isDark, toggleTheme } = useTheme()
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1100 !important;
   transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.theme-toggle.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Simplify for smaller screens */
 @media (max-width: 1500px) {
   .theme-toggle {
     right: 60px !important;
+    z-index: 1100 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .theme-toggle {
+    right: 30px !important;
+    z-index: 1100 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 20px !important;
+    right: 15px !important;
+    width: 60px;
+    height: 32px;
+    z-index: 1100 !important;
+  }
+  
+  .toggle-track {
+    padding: 3px 3px 4px 3px;
+  }
+  
+  .toggle-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .theme-toggle.dark .toggle-thumb {
+    transform: translateX(28px);
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
   }
 }
 

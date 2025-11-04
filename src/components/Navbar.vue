@@ -6,21 +6,15 @@
         <a href="#home">Rishi Parmar<span class="accent">.</span></a>
       </div>
       
-      <div class="nav-menu" :class="{ 'active': isMobileMenuOpen }">
+      <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="#home" @click="closeMenu">Home</a></li>
-          <li><a href="#about" @click="closeMenu">About</a></li>
-          <li><a href="#skills" @click="closeMenu">Skills</a></li>
-          <li><a href="#projects" @click="closeMenu">Projects</a></li>
-          <li><a href="#resume" @click="closeMenu">Resume</a></li>
-          <li><a href="#contact" @click="closeMenu">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-      
-      <div class="hamburger" @click="toggleMenu" :class="{ 'active': isMobileMenuOpen }">
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
     </div>
   </nav>
@@ -30,7 +24,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isScrolled = ref(false)
-const isMobileMenuOpen = ref(false)
 const scrollProgress = ref(0)
 const isVisible = ref(false)
 
@@ -41,14 +34,6 @@ const handleScroll = () => {
   const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
   const scrolled = (window.scrollY / windowHeight) * 100
   scrollProgress.value = Math.min(scrolled, 100)
-}
-
-const toggleMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
-
-const closeMenu = () => {
-  isMobileMenuOpen.value = false
 }
 
 onMounted(() => {
@@ -298,118 +283,31 @@ onUnmounted(() => {
   display: block;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 6px;
-  padding: 8px;
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-}
-
-.hamburger:hover {
-  background: rgba(6, 182, 212, 0.1);
-}
-
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: var(--color-primary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: var(--radius-full);
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 9px);
-  background: var(--color-accent);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -9px);
-  background: var(--color-accent);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
     top: 10px;
     width: calc(100% - 20px);
     border-radius: 18px;
+    height: auto;
+    padding: 10px 0;
   }
   
-  .hamburger {
-    display: flex;
-    z-index: 1002;
-  }
-  
-  .nav-menu {
-    position: fixed;
-    top: 80px;
-    right: 100%;
-    width: calc(100% - 40px);
-    margin: 0 20px;
-    max-height: calc(100vh - 100px);
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: var(--spacing-xl);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.08),
-      0 4px 16px rgba(6, 182, 212, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    overflow-y: auto;
-    z-index: 999;
-  }
-  
-  .nav-menu.active {
-    right: 20px;
+  .nav-container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
   }
   
   .nav-links {
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: stretch;
-    display: flex !important;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-links li {
-    list-style: none;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
   }
   
   .nav-links a {
-    font-size: var(--font-size-lg);
-    padding: var(--spacing-md);
-    text-align: center;
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    display: block;
-    color: var(--color-primary) !important;
-    text-decoration: none;
-  }
-  
-  .nav-links a::after {
-    display: none;
-  }
-  
-  .nav-links a:hover {
-    border-color: var(--color-accent);
-    background: rgba(6, 182, 212, 0.1);
-    transform: scale(1.02);
-    color: var(--color-accent) !important;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 }
 </style>
